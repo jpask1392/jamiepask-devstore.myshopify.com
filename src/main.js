@@ -26,6 +26,6 @@ Shopify.API.updateCartQuantity = (itemId, successCallback) => {
 }
 
 $(() => {
-  // render pico components
+  // render pico component
   app.mount();
 })
