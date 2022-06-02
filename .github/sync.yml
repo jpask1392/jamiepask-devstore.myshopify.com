@@ -1,6 +1,6 @@
 jpask1392/jamiepask-devstore.myshopify.com-built:
-  - source: workflows/sync.yml
-    dest: workflows/sync.yml
+  - source: .github/sync.yml
+    dest: .github/sync.yml
   - source: .github/workflows/
     dest: .github/workflows/
   - source: shopify/assets/
