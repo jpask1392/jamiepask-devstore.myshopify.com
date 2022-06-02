@@ -3,3 +3,13 @@ jpask1392/jamiepask-devstore.myshopify.com-built:
     dest: .github/workflows/
   - source: shopify/assets/
     dest: assets/
+  - source: shopify/config/
+    dest: config/
+  - source: shopify/locales/
+    dest: locales/ 
+  - source: shopify/sections/
+    dest: sections/ 
+  - source: shopify/snippets/
+    dest: snippets/ 
+  - source: shopify/templates/
+    dest: templates/
