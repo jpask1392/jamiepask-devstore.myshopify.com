@@ -1,4 +1,5 @@
 jpask1392/jamiepask-devstore.myshopify.com-built:
   - source: .github/workflows/
     dest: .github/workflows/
-  - source: shopify/
+  - source: shopify/assets
+    dest: assets/
