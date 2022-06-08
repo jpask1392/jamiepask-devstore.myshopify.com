@@ -3,7 +3,7 @@ jpask1392/jamiepask-devstore.myshopify.com@main:
     dest: shopify/assets/
     exclude: |
       bundle.css
-      build.css
+      bundle.js
   - source: config/
     dest: shopify/config/
   - source: locales/
