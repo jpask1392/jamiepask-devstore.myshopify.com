@@ -1,6 +1,6 @@
 jpask1392/jamiepask-devstore.myshopify.com@production/build:
-  # - source: .github/workflows/
-  #   dest: .github/workflows/
+  - source: .github/workflows/automerge.yml
+    dest: .github/workflows/automerge.yml
   - source: shopify/assets/
     dest: assets/
   - source: shopify/config/
@@ -13,17 +13,4 @@ jpask1392/jamiepask-devstore.myshopify.com@production/build:
     dest: snippets/ 
   - source: shopify/templates/
     dest: templates/
-
-# jpask1392/jamiepask-devstore.myshopify.com:
-#   - source: assets/
-#     dest: shopify/assets/
-#   - source: config/
-#     dest: shopify/config/
-#   - source: locales/
-#     dest: shopify/locales/ 
-#   - source: sections/
-#     dest: shopify/sections/ 
-#   - source: snippets/
-#     dest: shopify/snippets/ 
-#   - source: templates/
-#     dest: shopify/templates/
+    
