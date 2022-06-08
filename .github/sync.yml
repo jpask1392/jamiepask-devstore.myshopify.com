@@ -1,4 +1,4 @@
-jpask1392/jamiepask-devstore.myshopify.com:
+jpask1392/jamiepask-devstore.myshopify.com@main:
   - source: assets/
     dest: shopify/assets/
   - source: config/
