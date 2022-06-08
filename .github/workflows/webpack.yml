@@ -46,12 +46,12 @@ jobs:
         path: assets
 
     - name: Commit Assets
-      run: |
-        git config user.name "jarvis"
-        git config user.email "jarvis@techyscouts.com"
-        git add .
-        git commit -m '📦️ Update Assets'
-        git push
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: jarvis
+        author_email: jarvis@techyscouts.com
+        message: '📦️ Update Assets'
+        add: 'bundle.js bundle.css'
 
     - name: Switch Back to main an sync
       uses: actions/checkout@v3
