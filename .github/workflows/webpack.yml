@@ -34,8 +34,16 @@ jobs:
         path: |
           shopify/assets/bundle.css
           shopify/assets/bundle.js
+        
+    - name: Run GitHub File Sync
+      uses: BetaHuhn/repo-file-sync-action@v1
+      with:
+        GH_PAT: ${{ secrets.GH_PAT }}
+        PR_LABELS: |
+          file-sync
+          automerge
 
-    - name: Switch to build branch
+    - name: Checkout Build Branch
       uses: actions/checkout@v3
       with:
         ref: production/build
@@ -53,15 +61,7 @@ jobs:
         message: '📦️ Update Assets'
         add: 'bundle.js bundle.css'
 
-    - name: Switch Back to main an sync
+    - name: Checkout Main Branch
       uses: actions/checkout@v3
       with:
         ref: main
-        
-    - name: Run GitHub File Sync
-      uses: BetaHuhn/repo-file-sync-action@v1
-      with:
-        GH_PAT: ${{ secrets.GH_PAT }}
-        PR_LABELS: |
-          file-sync
-          automerge
