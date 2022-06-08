@@ -35,19 +35,19 @@ jobs:
           shopify/assets/bundle.css
           shopify/assets/bundle.js
 
-    - uses: actions/download-artifact@v3
-      with:
-        name: built-files
-        path: shopify/assets
-
     - name: Switch to build branch
       uses: actions/checkout@v3
       with:
         ref: production/build
 
+    - uses: actions/download-artifact@v3
+      with:
+        name: built-files
+        path: assets
+
     - name: Log assets
       run: |
-        cd shopify/assets
+        cd assets
         ls -la
         
     - name: Run GitHub File Sync
