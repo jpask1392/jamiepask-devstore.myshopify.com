@@ -1,6 +1,9 @@
 jpask1392/jamiepask-devstore.myshopify.com@main:
   - source: assets/
     dest: shopify/assets/
+    exclude: |
+      bundle.css
+      build.css
   - source: config/
     dest: shopify/config/
   - source: locales/
