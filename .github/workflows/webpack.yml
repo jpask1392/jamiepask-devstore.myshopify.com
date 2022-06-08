@@ -51,7 +51,7 @@ jobs:
         author_name: jarvis
         author_email: jarvis@techyscouts.com
         message: '📦️ Update Assets'
-        add: 'bundle.js bundle.css'
+        add: 'assets/bundle.js assets/bundle.css'
 
     - name: Checkout Main Branch
       uses: actions/checkout@v3
