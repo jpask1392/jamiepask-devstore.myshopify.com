@@ -1,0 +1,13 @@
+jpask1392/jamiepask-devstore.myshopify.com:
+  - source: assets/
+    dest: shopify/assets/
+  - source: config/
+    dest: shopify/config/
+  - source: locales/
+    dest: shopify/locales/ 
+  - source: sections/
+    dest: shopify/sections/ 
+  - source: snippets/
+    dest: shopify/snippets/ 
+  - source: templates/
+    dest: shopify/templates/
