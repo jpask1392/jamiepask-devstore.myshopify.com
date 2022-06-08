@@ -30,8 +30,17 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: my-artifact
-        path: shopify/assets/
+        name: built-files
+        path: |
+          shopify/assets/bundle.css
+          shopify/assets/bundle.js
+
+    - uses: actions/download-artifact@v3
+      with:
+        name: built-files
+
+    - name: Display structure of downloaded files
+      run: ls -R
 
     - name: Checkout Repository
       uses: actions/checkout@master
