@@ -34,14 +34,6 @@ jobs:
         path: |
           shopify/assets/bundle.css
           shopify/assets/bundle.js
-        
-    - name: Run GitHub File Sync
-      uses: BetaHuhn/repo-file-sync-action@v1
-      with:
-        GH_PAT: ${{ secrets.GH_PAT }}
-        PR_LABELS: |
-          file-sync
-          automerge
 
     - name: Checkout Build Branch
       uses: actions/checkout@v3
@@ -65,3 +57,11 @@ jobs:
       uses: actions/checkout@v3
       with:
         ref: main
+        
+    - name: Run GitHub File Sync
+      uses: BetaHuhn/repo-file-sync-action@v1
+      with:
+        GH_PAT: ${{ secrets.GH_PAT }}
+        PR_LABELS: |
+          file-sync
+          automerge
