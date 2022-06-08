@@ -45,10 +45,18 @@ jobs:
         name: built-files
         path: assets
 
-    - name: Log assets
+    - name: Commit Assets
       run: |
-        cd assets
-        ls -la
+        git config user.name "jarvis"
+        git config user.email "jarvis@techyscouts.com"
+        git add .
+        git commit -m '📦️ Update Assets'
+        git push
+
+    - name: Switch Back to main an sync
+      uses: actions/checkout@v3
+      with:
+        ref: main
         
     - name: Run GitHub File Sync
       uses: BetaHuhn/repo-file-sync-action@v1
