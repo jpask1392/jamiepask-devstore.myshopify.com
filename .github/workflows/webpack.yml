@@ -41,9 +41,12 @@ jobs:
         path: shopify/assets
 
     - name: Commit Artifacts
+      uses: actions/checkout@v3
+      with:
+        ref: production/build
       run: |
-        cd shopify/assets
-        ls -la
+          cd shopify/assets
+          ls -la      
 
     - name: Run GitHub File Sync
       uses: BetaHuhn/repo-file-sync-action@v1
