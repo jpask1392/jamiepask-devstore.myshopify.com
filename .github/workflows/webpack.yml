@@ -38,12 +38,17 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: built-files
+        path: shopify/assets
 
-    - name: Display structure of downloaded files
-      run: ls -R
-
-    - name: Checkout Repository
-      uses: actions/checkout@master
+    - name: Commit Artifacts
+      run: |
+        git config user.name "jarvis"
+        git config user.email "jarvis@techyscouts.com"
+        git checkout production/build
+        git add shopify/assets
+        git commit -m '📦️ Update Assets'
+        git push
+        git checkout main
 
     - name: Run GitHub File Sync
       uses: BetaHuhn/repo-file-sync-action@v1
