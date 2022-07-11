@@ -32,8 +32,8 @@ jobs:
       with:
         name: built-files
         path: |
-          shopify/assets/bundle.css
-          shopify/assets/bundle.js
+          shopify/assets/*bundle*.css
+          shopify/assets/*bundle*.js
 
     - name: Checkout Build Branch
       uses: actions/checkout@v3
@@ -51,7 +51,7 @@ jobs:
         author_name: jarvis
         author_email: jarvis@techyscouts.com
         message: '📦️ Update Assets'
-        add: 'assets/bundle.js assets/bundle.css'
+        add: 'assets/*bundle*.js assets/*bundle*.css'
 
     - name: Checkout Main Branch
       uses: actions/checkout@v3
