@@ -3,8 +3,6 @@ name: NodeJS with Webpack
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - 'src/**'
   pull_request:
     branches: [ "main" ]
 jobs:
@@ -59,6 +57,7 @@ jobs:
       with:
         ref: main
         
+  sync:
     - name: Run GitHub File Sync
       uses: BetaHuhn/repo-file-sync-action@v1
       with:
