@@ -2,9 +2,9 @@ name: NodeJS with Webpack
 
 on:
   push:
-    branches: [ 
-      "main/src/**" 
-    ]
+    branches: [ "main" ]
+    paths-ignore:
+      - 'shopify/**'
   pull_request:
     branches: [ "main" ]
 jobs:
