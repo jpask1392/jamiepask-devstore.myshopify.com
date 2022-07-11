@@ -2,13 +2,11 @@ name: NodeJS with Webpack
 
 on:
   push:
-    branches: [ "main" ]
-    paths:
-      - 'src/*'
+    branches: [ 
+      "main/src/**" 
+    ]
   pull_request:
     branches: [ "main" ]
-    paths:
-      - 'src/*'
 jobs:
   build:
     runs-on: ubuntu-latest
